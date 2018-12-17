@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://service/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WSCliente" targetNamespace="http://service/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WSAlimentos/WSCliente?xsd=1" namespace="http://service/" />
+    </xsd:schema>
+  </types>
+  <message name="findCliente">
+    <part name="parameters" element="tns:findCliente" />
+  </message>
+  <message name="findClienteResponse">
+    <part name="parameters" element="tns:findClienteResponse" />
+  </message>
+  <message name="createCliente">
+    <part name="parameters" element="tns:createCliente" />
+  </message>
+  <message name="createClienteResponse">
+    <part name="parameters" element="tns:createClienteResponse" />
+  </message>
+  <message name="editCliente">
+    <part name="parameters" element="tns:editCliente" />
+  </message>
+  <message name="editClienteResponse">
+    <part name="parameters" element="tns:editClienteResponse" />
+  </message>
+  <message name="removeCliente">
+    <part name="parameters" element="tns:removeCliente" />
+  </message>
+  <message name="removeClienteResponse">
+    <part name="parameters" element="tns:removeClienteResponse" />
+  </message>
+  <message name="findAllCliente">
+    <part name="parameters" element="tns:findAllCliente" />
+  </message>
+  <message name="findAllClienteResponse">
+    <part name="parameters" element="tns:findAllClienteResponse" />
+  </message>
+  <message name="findRangeCliente">
+    <part name="parameters" element="tns:findRangeCliente" />
+  </message>
+  <message name="findRangeClienteResponse">
+    <part name="parameters" element="tns:findRangeClienteResponse" />
+  </message>
+  <message name="countCliente">
+    <part name="parameters" element="tns:countCliente" />
+  </message>
+  <message name="countClienteResponse">
+    <part name="parameters" element="tns:countClienteResponse" />
+  </message>
+  <portType name="WSCliente">
+    <operation name="findCliente">
+      <input wsam:Action="http://service/WSCliente/findClienteRequest" message="tns:findCliente" />
+      <output wsam:Action="http://service/WSCliente/findClienteResponse" message="tns:findClienteResponse" />
+    </operation>
+    <operation name="createCliente">
+      <input wsam:Action="http://service/WSCliente/createClienteRequest" message="tns:createCliente" />
+      <output wsam:Action="http://service/WSCliente/createClienteResponse" message="tns:createClienteResponse" />
+    </operation>
+    <operation name="editCliente">
+      <input wsam:Action="http://service/WSCliente/editClienteRequest" message="tns:editCliente" />
+      <output wsam:Action="http://service/WSCliente/editClienteResponse" message="tns:editClienteResponse" />
+    </operation>
+    <operation name="removeCliente">
+      <input wsam:Action="http://service/WSCliente/removeClienteRequest" message="tns:removeCliente" />
+      <output wsam:Action="http://service/WSCliente/removeClienteResponse" message="tns:removeClienteResponse" />
+    </operation>
+    <operation name="findAllCliente">
+      <input wsam:Action="http://service/WSCliente/findAllClienteRequest" message="tns:findAllCliente" />
+      <output wsam:Action="http://service/WSCliente/findAllClienteResponse" message="tns:findAllClienteResponse" />
+    </operation>
+    <operation name="findRangeCliente">
+      <input wsam:Action="http://service/WSCliente/findRangeClienteRequest" message="tns:findRangeCliente" />
+      <output wsam:Action="http://service/WSCliente/findRangeClienteResponse" message="tns:findRangeClienteResponse" />
+    </operation>
+    <operation name="countCliente">
+      <input wsam:Action="http://service/WSCliente/countClienteRequest" message="tns:countCliente" />
+      <output wsam:Action="http://service/WSCliente/countClienteResponse" message="tns:countClienteResponse" />
+    </operation>
+  </portType>
+  <binding name="WSClientePortBinding" type="tns:WSCliente">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="findCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removeCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findAllCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findRangeCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="countCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WSCliente">
+    <port name="WSClientePort" binding="tns:WSClientePortBinding">
+      <soap:address location="http://localhost:8080/WSAlimentos/WSCliente" />
+    </port>
+  </service>
+</definitions>

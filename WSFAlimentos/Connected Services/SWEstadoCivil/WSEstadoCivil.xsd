@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://service/" targetNamespace="http://service/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="countEstadoCivil" type="tns:countEstadoCivil" />
+  <xs:element name="countEstadoCivilResponse" type="tns:countEstadoCivilResponse" />
+  <xs:element name="createEstadoCivil" type="tns:createEstadoCivil" />
+  <xs:element name="createEstadoCivilResponse" type="tns:createEstadoCivilResponse" />
+  <xs:element name="editEstadoCivil" type="tns:editEstadoCivil" />
+  <xs:element name="editEstadoCivilResponse" type="tns:editEstadoCivilResponse" />
+  <xs:element name="estadoCivil" type="tns:estadoCivil" />
+  <xs:element name="findAllEstadoCivil" type="tns:findAllEstadoCivil" />
+  <xs:element name="findAllEstadoCivilResponse" type="tns:findAllEstadoCivilResponse" />
+  <xs:element name="findEstadoCivil" type="tns:findEstadoCivil" />
+  <xs:element name="findEstadoCivilResponse" type="tns:findEstadoCivilResponse" />
+  <xs:element name="findRangeEstadoCivil" type="tns:findRangeEstadoCivil" />
+  <xs:element name="findRangeEstadoCivilResponse" type="tns:findRangeEstadoCivilResponse" />
+  <xs:element name="removeEstadoCivil" type="tns:removeEstadoCivil" />
+  <xs:element name="removeEstadoCivilResponse" type="tns:removeEstadoCivilResponse" />
+  <xs:complexType name="findRangeEstadoCivil">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="range" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRangeEstadoCivilResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:estadoCivil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estadoCivil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionEstadoCivil" type="xs:string" />
+      <xs:element minOccurs="0" name="idEstadoCivil" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createEstadoCivil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:estadoCivil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createEstadoCivilResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editEstadoCivil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:estadoCivil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editEstadoCivilResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findEstadoCivil">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findEstadoCivilResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:estadoCivil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeEstadoCivil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:estadoCivil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeEstadoCivilResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findAllEstadoCivil">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="findAllEstadoCivilResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:estadoCivil" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="countEstadoCivil">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="countEstadoCivilResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

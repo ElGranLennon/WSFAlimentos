@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://service/" targetNamespace="http://service/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="cliente" type="tns:cliente" />
+  <xs:element name="countCliente" type="tns:countCliente" />
+  <xs:element name="countClienteResponse" type="tns:countClienteResponse" />
+  <xs:element name="createCliente" type="tns:createCliente" />
+  <xs:element name="createClienteResponse" type="tns:createClienteResponse" />
+  <xs:element name="editCliente" type="tns:editCliente" />
+  <xs:element name="editClienteResponse" type="tns:editClienteResponse" />
+  <xs:element name="estadoCivil" type="tns:estadoCivil" />
+  <xs:element name="findAllCliente" type="tns:findAllCliente" />
+  <xs:element name="findAllClienteResponse" type="tns:findAllClienteResponse" />
+  <xs:element name="findCliente" type="tns:findCliente" />
+  <xs:element name="findClienteResponse" type="tns:findClienteResponse" />
+  <xs:element name="findRangeCliente" type="tns:findRangeCliente" />
+  <xs:element name="findRangeClienteResponse" type="tns:findRangeClienteResponse" />
+  <xs:element name="removeCliente" type="tns:removeCliente" />
+  <xs:element name="removeClienteResponse" type="tns:removeClienteResponse" />
+  <xs:complexType name="createCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element name="activoC" type="xs:boolean" />
+      <xs:element minOccurs="0" name="apellidoCliente" type="xs:string" />
+      <xs:element minOccurs="0" name="dv" type="xs:string" />
+      <xs:element name="edadCliente" type="xs:short" />
+      <xs:element minOccurs="0" name="estadoCivilIdEstadoCivil" type="tns:estadoCivil" />
+      <xs:element minOccurs="0" name="idCliente" type="xs:short" />
+      <xs:element minOccurs="0" name="nombreCliente" type="xs:string" />
+      <xs:element name="rut" type="xs:int" />
+      <xs:element name="sexo" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estadoCivil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionEstadoCivil" type="xs:string" />
+      <xs:element minOccurs="0" name="idEstadoCivil" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createClienteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findAllCliente">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="findAllClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findCliente">
+    <xs:sequence>
+      <xs:element name="rut" type="xs:int" />
+      <xs:element minOccurs="0" name="dv" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRangeCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="range" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRangeClienteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editClienteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeCliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:cliente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeClienteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="countCliente">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="countClienteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

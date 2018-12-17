@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://service/" targetNamespace="http://service/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CreateBoleta2" type="tns:CreateBoleta2" />
+  <xs:element name="CreateBoleta2Response" type="tns:CreateBoleta2Response" />
+  <xs:element name="boleta" type="tns:boleta" />
+  <xs:element name="cliente" type="tns:cliente" />
+  <xs:element name="countBoleta" type="tns:countBoleta" />
+  <xs:element name="countBoletaResponse" type="tns:countBoletaResponse" />
+  <xs:element name="createBoleta" type="tns:createBoleta" />
+  <xs:element name="createBoletaResponse" type="tns:createBoletaResponse" />
+  <xs:element name="editBoleta" type="tns:editBoleta" />
+  <xs:element name="editBoletaResponse" type="tns:editBoletaResponse" />
+  <xs:element name="estadoCivil" type="tns:estadoCivil" />
+  <xs:element name="findAllBoleta" type="tns:findAllBoleta" />
+  <xs:element name="findAllBoletaResponse" type="tns:findAllBoletaResponse" />
+  <xs:element name="findBoleta" type="tns:findBoleta" />
+  <xs:element name="findBoletaResponse" type="tns:findBoletaResponse" />
+  <xs:element name="findRangeBoleta" type="tns:findRangeBoleta" />
+  <xs:element name="findRangeBoletaResponse" type="tns:findRangeBoletaResponse" />
+  <xs:element name="removeBoleta" type="tns:removeBoleta" />
+  <xs:element name="removeBoletaResponse" type="tns:removeBoletaResponse" />
+  <xs:element name="ventas" type="tns:ventas" />
+  <xs:complexType name="CreateBoleta2">
+    <xs:sequence>
+      <xs:element name="idVenta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreateBoleta2Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="countBoleta">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="countBoletaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createBoleta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:boleta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="boleta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idBoleta" type="xs:int" />
+      <xs:element minOccurs="0" name="ventasIdventas" type="tns:ventas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ventas">
+    <xs:sequence>
+      <xs:element name="activoV" type="xs:boolean" />
+      <xs:element minOccurs="0" name="clienteIdCliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="fechaEntrega" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaVenta" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idventas" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element name="activoC" type="xs:boolean" />
+      <xs:element minOccurs="0" name="apellidoCliente" type="xs:string" />
+      <xs:element minOccurs="0" name="dv" type="xs:string" />
+      <xs:element name="edadCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="estadoCivilIdEstadoCivil" type="tns:estadoCivil" />
+      <xs:element minOccurs="0" name="idCliente" type="xs:short" />
+      <xs:element minOccurs="0" name="nombreCliente" type="xs:string" />
+      <xs:element name="rut" type="xs:int" />
+      <xs:element name="sexo" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estadoCivil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionEstadoCivil" type="xs:string" />
+      <xs:element minOccurs="0" name="idEstadoCivil" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createBoletaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeBoleta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:boleta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeBoletaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findAllBoleta">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="findAllBoletaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:boleta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findBoleta">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findBoletaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:boleta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editBoleta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:boleta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editBoletaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRangeBoleta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="range" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRangeBoletaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:boleta" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

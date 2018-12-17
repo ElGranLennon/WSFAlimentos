@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://service/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WSSubTipo" targetNamespace="http://service/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WSAlimentos/WSSubTipo?xsd=1" namespace="http://service/" />
+    </xsd:schema>
+  </types>
+  <message name="findSubtipoProducto">
+    <part name="parameters" element="tns:findSubtipoProducto" />
+  </message>
+  <message name="findSubtipoProductoResponse">
+    <part name="parameters" element="tns:findSubtipoProductoResponse" />
+  </message>
+  <message name="createSubTipo">
+    <part name="parameters" element="tns:createSubTipo" />
+  </message>
+  <message name="createSubTipoResponse">
+    <part name="parameters" element="tns:createSubTipoResponse" />
+  </message>
+  <message name="edioSubTipo">
+    <part name="parameters" element="tns:edioSubTipo" />
+  </message>
+  <message name="edioSubTipoResponse">
+    <part name="parameters" element="tns:edioSubTipoResponse" />
+  </message>
+  <message name="removoSubTipo">
+    <part name="parameters" element="tns:removoSubTipo" />
+  </message>
+  <message name="removoSubTipoResponse">
+    <part name="parameters" element="tns:removoSubTipoResponse" />
+  </message>
+  <message name="findAllSubTipo">
+    <part name="parameters" element="tns:findAllSubTipo" />
+  </message>
+  <message name="findAllSubTipoResponse">
+    <part name="parameters" element="tns:findAllSubTipoResponse" />
+  </message>
+  <message name="findRangeSubTipo">
+    <part name="parameters" element="tns:findRangeSubTipo" />
+  </message>
+  <message name="findRangeSubTipoResponse">
+    <part name="parameters" element="tns:findRangeSubTipoResponse" />
+  </message>
+  <message name="countSubTipo">
+    <part name="parameters" element="tns:countSubTipo" />
+  </message>
+  <message name="countSubTipoResponse">
+    <part name="parameters" element="tns:countSubTipoResponse" />
+  </message>
+  <portType name="WSSubTipo">
+    <operation name="findSubtipoProducto">
+      <input wsam:Action="http://service/WSSubTipo/findSubtipoProductoRequest" message="tns:findSubtipoProducto" />
+      <output wsam:Action="http://service/WSSubTipo/findSubtipoProductoResponse" message="tns:findSubtipoProductoResponse" />
+    </operation>
+    <operation name="createSubTipo">
+      <input wsam:Action="http://service/WSSubTipo/createSubTipoRequest" message="tns:createSubTipo" />
+      <output wsam:Action="http://service/WSSubTipo/createSubTipoResponse" message="tns:createSubTipoResponse" />
+    </operation>
+    <operation name="edioSubTipo">
+      <input wsam:Action="http://service/WSSubTipo/edioSubTipoRequest" message="tns:edioSubTipo" />
+      <output wsam:Action="http://service/WSSubTipo/edioSubTipoResponse" message="tns:edioSubTipoResponse" />
+    </operation>
+    <operation name="removoSubTipo">
+      <input wsam:Action="http://service/WSSubTipo/removoSubTipoRequest" message="tns:removoSubTipo" />
+      <output wsam:Action="http://service/WSSubTipo/removoSubTipoResponse" message="tns:removoSubTipoResponse" />
+    </operation>
+    <operation name="findAllSubTipo">
+      <input wsam:Action="http://service/WSSubTipo/findAllSubTipoRequest" message="tns:findAllSubTipo" />
+      <output wsam:Action="http://service/WSSubTipo/findAllSubTipoResponse" message="tns:findAllSubTipoResponse" />
+    </operation>
+    <operation name="findRangeSubTipo">
+      <input wsam:Action="http://service/WSSubTipo/findRangeSubTipoRequest" message="tns:findRangeSubTipo" />
+      <output wsam:Action="http://service/WSSubTipo/findRangeSubTipoResponse" message="tns:findRangeSubTipoResponse" />
+    </operation>
+    <operation name="countSubTipo">
+      <input wsam:Action="http://service/WSSubTipo/countSubTipoRequest" message="tns:countSubTipo" />
+      <output wsam:Action="http://service/WSSubTipo/countSubTipoResponse" message="tns:countSubTipoResponse" />
+    </operation>
+  </portType>
+  <binding name="WSSubTipoPortBinding" type="tns:WSSubTipo">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="findSubtipoProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createSubTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="edioSubTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removoSubTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findAllSubTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findRangeSubTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="countSubTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WSSubTipo">
+    <port name="WSSubTipoPort" binding="tns:WSSubTipoPortBinding">
+      <soap:address location="http://localhost:8080/WSAlimentos/WSSubTipo" />
+    </port>
+  </service>
+</definitions>

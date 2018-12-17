@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://service/" targetNamespace="http://service/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="boleta" type="tns:boleta" />
+  <xs:element name="cliente" type="tns:cliente" />
+  <xs:element name="countDetalle" type="tns:countDetalle" />
+  <xs:element name="countDetalleResponse" type="tns:countDetalleResponse" />
+  <xs:element name="createDetalle" type="tns:createDetalle" />
+  <xs:element name="createDetalle2" type="tns:createDetalle2" />
+  <xs:element name="createDetalle2Response" type="tns:createDetalle2Response" />
+  <xs:element name="createDetalleResponse" type="tns:createDetalleResponse" />
+  <xs:element name="detalle" type="tns:detalle" />
+  <xs:element name="editDetalle" type="tns:editDetalle" />
+  <xs:element name="editDetalleResponse" type="tns:editDetalleResponse" />
+  <xs:element name="estadoCivil" type="tns:estadoCivil" />
+  <xs:element name="findAllDetalle" type="tns:findAllDetalle" />
+  <xs:element name="findAllDetalleResponse" type="tns:findAllDetalleResponse" />
+  <xs:element name="findDetalle" type="tns:findDetalle" />
+  <xs:element name="findDetalleResponse" type="tns:findDetalleResponse" />
+  <xs:element name="findRangeDetalle" type="tns:findRangeDetalle" />
+  <xs:element name="findRangeDetalleResponse" type="tns:findRangeDetalleResponse" />
+  <xs:element name="producto" type="tns:producto" />
+  <xs:element name="removeDetalle" type="tns:removeDetalle" />
+  <xs:element name="removeDetalleResponse" type="tns:removeDetalleResponse" />
+  <xs:element name="subtipoProducto" type="tns:subtipoProducto" />
+  <xs:element name="tipoProducto" type="tns:tipoProducto" />
+  <xs:element name="ventas" type="tns:ventas" />
+  <xs:complexType name="createDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:detalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="boletaIdBoleta" type="tns:boleta" />
+      <xs:element minOccurs="0" name="idDetalle" type="xs:float" />
+      <xs:element minOccurs="0" name="productoIdProducto" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="boleta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idBoleta" type="xs:int" />
+      <xs:element minOccurs="0" name="ventasIdventas" type="tns:ventas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ventas">
+    <xs:sequence>
+      <xs:element name="activoV" type="xs:boolean" />
+      <xs:element minOccurs="0" name="clienteIdCliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="fechaEntrega" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaVenta" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idventas" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element name="activoC" type="xs:boolean" />
+      <xs:element minOccurs="0" name="apellidoCliente" type="xs:string" />
+      <xs:element minOccurs="0" name="dv" type="xs:string" />
+      <xs:element name="edadCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="estadoCivilIdEstadoCivil" type="tns:estadoCivil" />
+      <xs:element minOccurs="0" name="idCliente" type="xs:short" />
+      <xs:element minOccurs="0" name="nombreCliente" type="xs:string" />
+      <xs:element name="rut" type="xs:int" />
+      <xs:element name="sexo" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estadoCivil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionEstadoCivil" type="xs:string" />
+      <xs:element minOccurs="0" name="idEstadoCivil" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anioF" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="anioV" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="descripcionProducto" type="xs:string" />
+      <xs:element minOccurs="0" name="idProducto" type="xs:short" />
+      <xs:element minOccurs="0" name="nombreProducto" type="xs:string" />
+      <xs:element name="precioProducto" type="xs:int" />
+      <xs:element name="stock" type="xs:int" />
+      <xs:element minOccurs="0" name="subtipoProducto" type="tns:subtipoProducto" />
+      <xs:element minOccurs="0" name="tarificacion" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subtipoProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionStp" type="xs:string" />
+      <xs:element minOccurs="0" name="subtipoProductoPK" type="tns:subtipoProductoPK" />
+      <xs:element minOccurs="0" name="tipoProducto" type="tns:tipoProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subtipoProductoPK">
+    <xs:sequence>
+      <xs:element name="subtipoP" type="xs:short" />
+      <xs:element name="tipoProductoIdTp" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionTp" type="xs:string" />
+      <xs:element minOccurs="0" name="idTp" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createDetalleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:detalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editDetalleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:detalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeDetalleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="countDetalle">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="countDetalleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRangeDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="range" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRangeDetalleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:detalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findAllDetalle">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="findAllDetalleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:detalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createDetalle2">
+    <xs:sequence>
+      <xs:element name="idProducto" type="xs:int" />
+      <xs:element name="idBoleta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createDetalle2Response">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findDetalle">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findDetalleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:detalle" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

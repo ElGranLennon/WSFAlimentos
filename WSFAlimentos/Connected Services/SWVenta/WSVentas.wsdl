@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://service/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WSVentas" targetNamespace="http://service/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WSAlimentos/WSVentas?xsd=1" namespace="http://service/" />
+    </xsd:schema>
+  </types>
+  <message name="findVentas">
+    <part name="parameters" element="tns:findVentas" />
+  </message>
+  <message name="findVentasResponse">
+    <part name="parameters" element="tns:findVentasResponse" />
+  </message>
+  <message name="createVentas">
+    <part name="parameters" element="tns:createVentas" />
+  </message>
+  <message name="createVentasResponse">
+    <part name="parameters" element="tns:createVentasResponse" />
+  </message>
+  <message name="editVentas">
+    <part name="parameters" element="tns:editVentas" />
+  </message>
+  <message name="editVentasResponse">
+    <part name="parameters" element="tns:editVentasResponse" />
+  </message>
+  <message name="removeVentas">
+    <part name="parameters" element="tns:removeVentas" />
+  </message>
+  <message name="removeVentasResponse">
+    <part name="parameters" element="tns:removeVentasResponse" />
+  </message>
+  <message name="findAllVentas">
+    <part name="parameters" element="tns:findAllVentas" />
+  </message>
+  <message name="findAllVentasResponse">
+    <part name="parameters" element="tns:findAllVentasResponse" />
+  </message>
+  <message name="findRangeVentas">
+    <part name="parameters" element="tns:findRangeVentas" />
+  </message>
+  <message name="findRangeVentasResponse">
+    <part name="parameters" element="tns:findRangeVentasResponse" />
+  </message>
+  <message name="count">
+    <part name="parameters" element="tns:count" />
+  </message>
+  <message name="countResponse">
+    <part name="parameters" element="tns:countResponse" />
+  </message>
+  <message name="CrearVenta2">
+    <part name="parameters" element="tns:CrearVenta2" />
+  </message>
+  <message name="CrearVenta2Response">
+    <part name="parameters" element="tns:CrearVenta2Response" />
+  </message>
+  <portType name="WSVentas">
+    <operation name="findVentas">
+      <input wsam:Action="http://service/WSVentas/findVentasRequest" message="tns:findVentas" />
+      <output wsam:Action="http://service/WSVentas/findVentasResponse" message="tns:findVentasResponse" />
+    </operation>
+    <operation name="createVentas">
+      <input wsam:Action="http://service/WSVentas/createVentasRequest" message="tns:createVentas" />
+      <output wsam:Action="http://service/WSVentas/createVentasResponse" message="tns:createVentasResponse" />
+    </operation>
+    <operation name="editVentas">
+      <input wsam:Action="http://service/WSVentas/editVentasRequest" message="tns:editVentas" />
+      <output wsam:Action="http://service/WSVentas/editVentasResponse" message="tns:editVentasResponse" />
+    </operation>
+    <operation name="removeVentas">
+      <input wsam:Action="http://service/WSVentas/removeVentasRequest" message="tns:removeVentas" />
+      <output wsam:Action="http://service/WSVentas/removeVentasResponse" message="tns:removeVentasResponse" />
+    </operation>
+    <operation name="findAllVentas">
+      <input wsam:Action="http://service/WSVentas/findAllVentasRequest" message="tns:findAllVentas" />
+      <output wsam:Action="http://service/WSVentas/findAllVentasResponse" message="tns:findAllVentasResponse" />
+    </operation>
+    <operation name="findRangeVentas">
+      <input wsam:Action="http://service/WSVentas/findRangeVentasRequest" message="tns:findRangeVentas" />
+      <output wsam:Action="http://service/WSVentas/findRangeVentasResponse" message="tns:findRangeVentasResponse" />
+    </operation>
+    <operation name="count">
+      <input wsam:Action="http://service/WSVentas/countRequest" message="tns:count" />
+      <output wsam:Action="http://service/WSVentas/countResponse" message="tns:countResponse" />
+    </operation>
+    <operation name="CrearVenta2">
+      <input wsam:Action="http://service/WSVentas/CrearVenta2Request" message="tns:CrearVenta2" />
+      <output wsam:Action="http://service/WSVentas/CrearVenta2Response" message="tns:CrearVenta2Response" />
+    </operation>
+  </portType>
+  <binding name="WSVentasPortBinding" type="tns:WSVentas">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="findVentas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createVentas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editVentas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removeVentas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findAllVentas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findRangeVentas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="count">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CrearVenta2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WSVentas">
+    <port name="WSVentasPort" binding="tns:WSVentasPortBinding">
+      <soap:address location="http://localhost:8080/WSAlimentos/WSVentas" />
+    </port>
+  </service>
+</definitions>

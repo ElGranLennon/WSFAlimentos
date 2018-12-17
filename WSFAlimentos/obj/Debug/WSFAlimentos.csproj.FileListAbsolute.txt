@@ -1,0 +1,24 @@
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\WSFAlimentos\bin\Debug\WSFAlimentos.exe.config
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\WSFAlimentos\bin\Debug\WSFAlimentos.exe
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\WSFAlimentos\bin\Debug\WSFAlimentos.pdb
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.csprojAssemblyReference.cache
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.AgregarProducto.resources
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.Home.resources
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.Properties.Resources.resources
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.csproj.GenerateResource.cache
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.csproj.CoreCompileInputs.cache
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.exe
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.pdb
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.Venta.resources
+C:\Users\Lennon\Source\Repos\WSFAlimentos\WSFAlimentos\bin\Debug\WSFAlimentos.exe.config
+C:\Users\Lennon\Source\Repos\WSFAlimentos\WSFAlimentos\bin\Debug\WSFAlimentos.exe
+C:\Users\Lennon\Source\Repos\WSFAlimentos\WSFAlimentos\bin\Debug\WSFAlimentos.pdb
+C:\Users\Lennon\Source\Repos\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.csprojAssemblyReference.cache
+C:\Users\Lennon\Source\Repos\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.AgregarProducto.resources
+C:\Users\Lennon\Source\Repos\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.Home.resources
+C:\Users\Lennon\Source\Repos\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.Properties.Resources.resources
+C:\Users\Lennon\Source\Repos\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.Venta.resources
+C:\Users\Lennon\Source\Repos\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.csproj.GenerateResource.cache
+C:\Users\Lennon\Source\Repos\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.csproj.CoreCompileInputs.cache
+C:\Users\Lennon\Source\Repos\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.exe
+C:\Users\Lennon\Source\Repos\WSFAlimentos\WSFAlimentos\obj\Debug\WSFAlimentos.pdb

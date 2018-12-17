@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://service/" targetNamespace="http://service/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CrearVenta2" type="tns:CrearVenta2" />
+  <xs:element name="CrearVenta2Response" type="tns:CrearVenta2Response" />
+  <xs:element name="cliente" type="tns:cliente" />
+  <xs:element name="count" type="tns:count" />
+  <xs:element name="countResponse" type="tns:countResponse" />
+  <xs:element name="createVentas" type="tns:createVentas" />
+  <xs:element name="createVentasResponse" type="tns:createVentasResponse" />
+  <xs:element name="editVentas" type="tns:editVentas" />
+  <xs:element name="editVentasResponse" type="tns:editVentasResponse" />
+  <xs:element name="estadoCivil" type="tns:estadoCivil" />
+  <xs:element name="findAllVentas" type="tns:findAllVentas" />
+  <xs:element name="findAllVentasResponse" type="tns:findAllVentasResponse" />
+  <xs:element name="findRangeVentas" type="tns:findRangeVentas" />
+  <xs:element name="findRangeVentasResponse" type="tns:findRangeVentasResponse" />
+  <xs:element name="findVentas" type="tns:findVentas" />
+  <xs:element name="findVentasResponse" type="tns:findVentasResponse" />
+  <xs:element name="removeVentas" type="tns:removeVentas" />
+  <xs:element name="removeVentasResponse" type="tns:removeVentasResponse" />
+  <xs:element name="ventas" type="tns:ventas" />
+  <xs:complexType name="findRangeVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="range" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRangeVentasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ventas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ventas">
+    <xs:sequence>
+      <xs:element name="activoV" type="xs:boolean" />
+      <xs:element minOccurs="0" name="clienteIdCliente" type="tns:cliente" />
+      <xs:element minOccurs="0" name="fechaEntrega" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaVenta" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="idventas" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element name="activoC" type="xs:boolean" />
+      <xs:element minOccurs="0" name="apellidoCliente" type="xs:string" />
+      <xs:element minOccurs="0" name="dv" type="xs:string" />
+      <xs:element name="edadCliente" type="xs:int" />
+      <xs:element minOccurs="0" name="estadoCivilIdEstadoCivil" type="tns:estadoCivil" />
+      <xs:element minOccurs="0" name="idCliente" type="xs:short" />
+      <xs:element minOccurs="0" name="nombreCliente" type="xs:string" />
+      <xs:element name="rut" type="xs:int" />
+      <xs:element name="sexo" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estadoCivil">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionEstadoCivil" type="xs:string" />
+      <xs:element minOccurs="0" name="idEstadoCivil" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findVentas">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findVentasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ventas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:ventas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editVentasResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearVenta2">
+    <xs:sequence>
+      <xs:element name="activo" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaE" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="dv" type="xs:string" />
+      <xs:element name="rut" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CrearVenta2Response">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findAllVentas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="findAllVentasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:ventas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="count">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="countResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:ventas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createVentasResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeVentas">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:ventas" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeVentasResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

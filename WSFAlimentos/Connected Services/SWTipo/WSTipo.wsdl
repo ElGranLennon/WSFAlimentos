@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://service/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WSTipo" targetNamespace="http://service/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WSAlimentos/WSTipo?xsd=1" namespace="http://service/" />
+    </xsd:schema>
+  </types>
+  <message name="createTipo">
+    <part name="parameters" element="tns:createTipo" />
+  </message>
+  <message name="createTipoResponse">
+    <part name="parameters" element="tns:createTipoResponse" />
+  </message>
+  <message name="editTipo">
+    <part name="parameters" element="tns:editTipo" />
+  </message>
+  <message name="editTipoResponse">
+    <part name="parameters" element="tns:editTipoResponse" />
+  </message>
+  <message name="removeTipo">
+    <part name="parameters" element="tns:removeTipo" />
+  </message>
+  <message name="removeTipoResponse">
+    <part name="parameters" element="tns:removeTipoResponse" />
+  </message>
+  <message name="findTipo">
+    <part name="parameters" element="tns:findTipo" />
+  </message>
+  <message name="findTipoResponse">
+    <part name="parameters" element="tns:findTipoResponse" />
+  </message>
+  <message name="findAllTipo">
+    <part name="parameters" element="tns:findAllTipo" />
+  </message>
+  <message name="findAllTipoResponse">
+    <part name="parameters" element="tns:findAllTipoResponse" />
+  </message>
+  <message name="findRangeTipo">
+    <part name="parameters" element="tns:findRangeTipo" />
+  </message>
+  <message name="findRangeTipoResponse">
+    <part name="parameters" element="tns:findRangeTipoResponse" />
+  </message>
+  <message name="countTipo">
+    <part name="parameters" element="tns:countTipo" />
+  </message>
+  <message name="countTipoResponse">
+    <part name="parameters" element="tns:countTipoResponse" />
+  </message>
+  <portType name="WSTipo">
+    <operation name="createTipo">
+      <input wsam:Action="http://service/WSTipo/createTipoRequest" message="tns:createTipo" />
+      <output wsam:Action="http://service/WSTipo/createTipoResponse" message="tns:createTipoResponse" />
+    </operation>
+    <operation name="editTipo">
+      <input wsam:Action="http://service/WSTipo/editTipoRequest" message="tns:editTipo" />
+      <output wsam:Action="http://service/WSTipo/editTipoResponse" message="tns:editTipoResponse" />
+    </operation>
+    <operation name="removeTipo">
+      <input wsam:Action="http://service/WSTipo/removeTipoRequest" message="tns:removeTipo" />
+      <output wsam:Action="http://service/WSTipo/removeTipoResponse" message="tns:removeTipoResponse" />
+    </operation>
+    <operation name="findTipo">
+      <input wsam:Action="http://service/WSTipo/findTipoRequest" message="tns:findTipo" />
+      <output wsam:Action="http://service/WSTipo/findTipoResponse" message="tns:findTipoResponse" />
+    </operation>
+    <operation name="findAllTipo">
+      <input wsam:Action="http://service/WSTipo/findAllTipoRequest" message="tns:findAllTipo" />
+      <output wsam:Action="http://service/WSTipo/findAllTipoResponse" message="tns:findAllTipoResponse" />
+    </operation>
+    <operation name="findRangeTipo">
+      <input wsam:Action="http://service/WSTipo/findRangeTipoRequest" message="tns:findRangeTipo" />
+      <output wsam:Action="http://service/WSTipo/findRangeTipoResponse" message="tns:findRangeTipoResponse" />
+    </operation>
+    <operation name="countTipo">
+      <input wsam:Action="http://service/WSTipo/countTipoRequest" message="tns:countTipo" />
+      <output wsam:Action="http://service/WSTipo/countTipoResponse" message="tns:countTipoResponse" />
+    </operation>
+  </portType>
+  <binding name="WSTipoPortBinding" type="tns:WSTipo">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="createTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removeTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findAllTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findRangeTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="countTipo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WSTipo">
+    <port name="WSTipoPort" binding="tns:WSTipoPortBinding">
+      <soap:address location="http://localhost:8080/WSAlimentos/WSTipo" />
+    </port>
+  </service>
+</definitions>

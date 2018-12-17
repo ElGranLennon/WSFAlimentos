@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://service/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WSEstadoCivil" targetNamespace="http://service/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WSAlimentos/WSEstadoCivil?xsd=1" namespace="http://service/" />
+    </xsd:schema>
+  </types>
+  <message name="createEstadoCivil">
+    <part name="parameters" element="tns:createEstadoCivil" />
+  </message>
+  <message name="createEstadoCivilResponse">
+    <part name="parameters" element="tns:createEstadoCivilResponse" />
+  </message>
+  <message name="removeEstadoCivil">
+    <part name="parameters" element="tns:removeEstadoCivil" />
+  </message>
+  <message name="removeEstadoCivilResponse">
+    <part name="parameters" element="tns:removeEstadoCivilResponse" />
+  </message>
+  <message name="findAllEstadoCivil">
+    <part name="parameters" element="tns:findAllEstadoCivil" />
+  </message>
+  <message name="findAllEstadoCivilResponse">
+    <part name="parameters" element="tns:findAllEstadoCivilResponse" />
+  </message>
+  <message name="findRangeEstadoCivil">
+    <part name="parameters" element="tns:findRangeEstadoCivil" />
+  </message>
+  <message name="findRangeEstadoCivilResponse">
+    <part name="parameters" element="tns:findRangeEstadoCivilResponse" />
+  </message>
+  <message name="editEstadoCivil">
+    <part name="parameters" element="tns:editEstadoCivil" />
+  </message>
+  <message name="editEstadoCivilResponse">
+    <part name="parameters" element="tns:editEstadoCivilResponse" />
+  </message>
+  <message name="findEstadoCivil">
+    <part name="parameters" element="tns:findEstadoCivil" />
+  </message>
+  <message name="findEstadoCivilResponse">
+    <part name="parameters" element="tns:findEstadoCivilResponse" />
+  </message>
+  <message name="countEstadoCivil">
+    <part name="parameters" element="tns:countEstadoCivil" />
+  </message>
+  <message name="countEstadoCivilResponse">
+    <part name="parameters" element="tns:countEstadoCivilResponse" />
+  </message>
+  <portType name="WSEstadoCivil">
+    <operation name="createEstadoCivil">
+      <input wsam:Action="http://service/WSEstadoCivil/createEstadoCivilRequest" message="tns:createEstadoCivil" />
+      <output wsam:Action="http://service/WSEstadoCivil/createEstadoCivilResponse" message="tns:createEstadoCivilResponse" />
+    </operation>
+    <operation name="removeEstadoCivil">
+      <input wsam:Action="http://service/WSEstadoCivil/removeEstadoCivilRequest" message="tns:removeEstadoCivil" />
+      <output wsam:Action="http://service/WSEstadoCivil/removeEstadoCivilResponse" message="tns:removeEstadoCivilResponse" />
+    </operation>
+    <operation name="findAllEstadoCivil">
+      <input wsam:Action="http://service/WSEstadoCivil/findAllEstadoCivilRequest" message="tns:findAllEstadoCivil" />
+      <output wsam:Action="http://service/WSEstadoCivil/findAllEstadoCivilResponse" message="tns:findAllEstadoCivilResponse" />
+    </operation>
+    <operation name="findRangeEstadoCivil">
+      <input wsam:Action="http://service/WSEstadoCivil/findRangeEstadoCivilRequest" message="tns:findRangeEstadoCivil" />
+      <output wsam:Action="http://service/WSEstadoCivil/findRangeEstadoCivilResponse" message="tns:findRangeEstadoCivilResponse" />
+    </operation>
+    <operation name="editEstadoCivil">
+      <input wsam:Action="http://service/WSEstadoCivil/editEstadoCivilRequest" message="tns:editEstadoCivil" />
+      <output wsam:Action="http://service/WSEstadoCivil/editEstadoCivilResponse" message="tns:editEstadoCivilResponse" />
+    </operation>
+    <operation name="findEstadoCivil">
+      <input wsam:Action="http://service/WSEstadoCivil/findEstadoCivilRequest" message="tns:findEstadoCivil" />
+      <output wsam:Action="http://service/WSEstadoCivil/findEstadoCivilResponse" message="tns:findEstadoCivilResponse" />
+    </operation>
+    <operation name="countEstadoCivil">
+      <input wsam:Action="http://service/WSEstadoCivil/countEstadoCivilRequest" message="tns:countEstadoCivil" />
+      <output wsam:Action="http://service/WSEstadoCivil/countEstadoCivilResponse" message="tns:countEstadoCivilResponse" />
+    </operation>
+  </portType>
+  <binding name="WSEstadoCivilPortBinding" type="tns:WSEstadoCivil">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="createEstadoCivil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removeEstadoCivil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findAllEstadoCivil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findRangeEstadoCivil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editEstadoCivil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findEstadoCivil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="countEstadoCivil">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WSEstadoCivil">
+    <port name="WSEstadoCivilPort" binding="tns:WSEstadoCivilPortBinding">
+      <soap:address location="http://localhost:8080/WSAlimentos/WSEstadoCivil" />
+    </port>
+  </service>
+</definitions>

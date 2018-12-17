@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://service/" targetNamespace="http://service/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="CreateProducto2" type="tns:CreateProducto2" />
+  <xs:element name="CreateProducto2Response" type="tns:CreateProducto2Response" />
+  <xs:element name="countProducto" type="tns:countProducto" />
+  <xs:element name="countProductoResponse" type="tns:countProductoResponse" />
+  <xs:element name="createProducto" type="tns:createProducto" />
+  <xs:element name="createProductoResponse" type="tns:createProductoResponse" />
+  <xs:element name="editProducto" type="tns:editProducto" />
+  <xs:element name="editProductoResponse" type="tns:editProductoResponse" />
+  <xs:element name="findAllProducto" type="tns:findAllProducto" />
+  <xs:element name="findAllProductoResponse" type="tns:findAllProductoResponse" />
+  <xs:element name="findProducto" type="tns:findProducto" />
+  <xs:element name="findProductoResponse" type="tns:findProductoResponse" />
+  <xs:element name="findRangeProducto" type="tns:findRangeProducto" />
+  <xs:element name="findRangeProductoResponse" type="tns:findRangeProductoResponse" />
+  <xs:element name="producto" type="tns:producto" />
+  <xs:element name="removeProducto" type="tns:removeProducto" />
+  <xs:element name="removeProductoResponse" type="tns:removeProductoResponse" />
+  <xs:element name="subtipoProducto" type="tns:subtipoProducto" />
+  <xs:element name="tipoProducto" type="tns:tipoProducto" />
+  <xs:complexType name="removeProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="producto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anioF" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="anioV" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="descripcionProducto" type="xs:string" />
+      <xs:element minOccurs="0" name="idProducto" type="xs:short" />
+      <xs:element minOccurs="0" name="nombreProducto" type="xs:string" />
+      <xs:element name="precioProducto" type="xs:int" />
+      <xs:element name="stock" type="xs:int" />
+      <xs:element minOccurs="0" name="subtipoProducto" type="tns:subtipoProducto" />
+      <xs:element minOccurs="0" name="tarificacion" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subtipoProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionStp" type="xs:string" />
+      <xs:element minOccurs="0" name="subtipoProductoPK" type="tns:subtipoProductoPK" />
+      <xs:element minOccurs="0" name="tipoProducto" type="tns:tipoProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subtipoProductoPK">
+    <xs:sequence>
+      <xs:element name="subtipoP" type="xs:short" />
+      <xs:element name="tipoProductoIdTp" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionTp" type="xs:string" />
+      <xs:element minOccurs="0" name="idTp" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeProductoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createProductoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="countProducto">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="countProductoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRangeProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="range" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRangeProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findAllProducto">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="findAllProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findProducto">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreateProducto2">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="precio" type="xs:int" />
+      <xs:element minOccurs="0" name="anioF" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="anioV" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element name="stock" type="xs:int" />
+      <xs:element name="tarifa" type="xs:double" />
+      <xs:element name="idSubTipo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreateProducto2Response">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:producto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editProductoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

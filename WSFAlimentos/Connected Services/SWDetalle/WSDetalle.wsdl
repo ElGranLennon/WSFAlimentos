@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://service/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WSDetalle" targetNamespace="http://service/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WSAlimentos/WSDetalle?xsd=1" namespace="http://service/" />
+    </xsd:schema>
+  </types>
+  <message name="findDetalle">
+    <part name="parameters" element="tns:findDetalle" />
+  </message>
+  <message name="findDetalleResponse">
+    <part name="parameters" element="tns:findDetalleResponse" />
+  </message>
+  <message name="createDetalle">
+    <part name="parameters" element="tns:createDetalle" />
+  </message>
+  <message name="createDetalleResponse">
+    <part name="parameters" element="tns:createDetalleResponse" />
+  </message>
+  <message name="editDetalle">
+    <part name="parameters" element="tns:editDetalle" />
+  </message>
+  <message name="editDetalleResponse">
+    <part name="parameters" element="tns:editDetalleResponse" />
+  </message>
+  <message name="removeDetalle">
+    <part name="parameters" element="tns:removeDetalle" />
+  </message>
+  <message name="removeDetalleResponse">
+    <part name="parameters" element="tns:removeDetalleResponse" />
+  </message>
+  <message name="findAllDetalle">
+    <part name="parameters" element="tns:findAllDetalle" />
+  </message>
+  <message name="findAllDetalleResponse">
+    <part name="parameters" element="tns:findAllDetalleResponse" />
+  </message>
+  <message name="findRangeDetalle">
+    <part name="parameters" element="tns:findRangeDetalle" />
+  </message>
+  <message name="findRangeDetalleResponse">
+    <part name="parameters" element="tns:findRangeDetalleResponse" />
+  </message>
+  <message name="countDetalle">
+    <part name="parameters" element="tns:countDetalle" />
+  </message>
+  <message name="countDetalleResponse">
+    <part name="parameters" element="tns:countDetalleResponse" />
+  </message>
+  <message name="createDetalle2">
+    <part name="parameters" element="tns:createDetalle2" />
+  </message>
+  <message name="createDetalle2Response">
+    <part name="parameters" element="tns:createDetalle2Response" />
+  </message>
+  <portType name="WSDetalle">
+    <operation name="findDetalle">
+      <input wsam:Action="http://service/WSDetalle/findDetalleRequest" message="tns:findDetalle" />
+      <output wsam:Action="http://service/WSDetalle/findDetalleResponse" message="tns:findDetalleResponse" />
+    </operation>
+    <operation name="createDetalle">
+      <input wsam:Action="http://service/WSDetalle/createDetalleRequest" message="tns:createDetalle" />
+      <output wsam:Action="http://service/WSDetalle/createDetalleResponse" message="tns:createDetalleResponse" />
+    </operation>
+    <operation name="editDetalle">
+      <input wsam:Action="http://service/WSDetalle/editDetalleRequest" message="tns:editDetalle" />
+      <output wsam:Action="http://service/WSDetalle/editDetalleResponse" message="tns:editDetalleResponse" />
+    </operation>
+    <operation name="removeDetalle">
+      <input wsam:Action="http://service/WSDetalle/removeDetalleRequest" message="tns:removeDetalle" />
+      <output wsam:Action="http://service/WSDetalle/removeDetalleResponse" message="tns:removeDetalleResponse" />
+    </operation>
+    <operation name="findAllDetalle">
+      <input wsam:Action="http://service/WSDetalle/findAllDetalleRequest" message="tns:findAllDetalle" />
+      <output wsam:Action="http://service/WSDetalle/findAllDetalleResponse" message="tns:findAllDetalleResponse" />
+    </operation>
+    <operation name="findRangeDetalle">
+      <input wsam:Action="http://service/WSDetalle/findRangeDetalleRequest" message="tns:findRangeDetalle" />
+      <output wsam:Action="http://service/WSDetalle/findRangeDetalleResponse" message="tns:findRangeDetalleResponse" />
+    </operation>
+    <operation name="countDetalle">
+      <input wsam:Action="http://service/WSDetalle/countDetalleRequest" message="tns:countDetalle" />
+      <output wsam:Action="http://service/WSDetalle/countDetalleResponse" message="tns:countDetalleResponse" />
+    </operation>
+    <operation name="createDetalle2">
+      <input wsam:Action="http://service/WSDetalle/createDetalle2Request" message="tns:createDetalle2" />
+      <output wsam:Action="http://service/WSDetalle/createDetalle2Response" message="tns:createDetalle2Response" />
+    </operation>
+  </portType>
+  <binding name="WSDetallePortBinding" type="tns:WSDetalle">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="findDetalle">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createDetalle">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editDetalle">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removeDetalle">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findAllDetalle">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findRangeDetalle">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="countDetalle">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createDetalle2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WSDetalle">
+    <port name="WSDetallePort" binding="tns:WSDetallePortBinding">
+      <soap:address location="http://localhost:8080/WSAlimentos/WSDetalle" />
+    </port>
+  </service>
+</definitions>

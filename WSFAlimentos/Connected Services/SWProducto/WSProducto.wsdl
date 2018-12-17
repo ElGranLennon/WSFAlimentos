@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://service/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WSProducto" targetNamespace="http://service/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WSAlimentos/WSProducto?xsd=1" namespace="http://service/" />
+    </xsd:schema>
+  </types>
+  <message name="findRangeProducto">
+    <part name="parameters" element="tns:findRangeProducto" />
+  </message>
+  <message name="findRangeProductoResponse">
+    <part name="parameters" element="tns:findRangeProductoResponse" />
+  </message>
+  <message name="findProducto">
+    <part name="parameters" element="tns:findProducto" />
+  </message>
+  <message name="findProductoResponse">
+    <part name="parameters" element="tns:findProductoResponse" />
+  </message>
+  <message name="createProducto">
+    <part name="parameters" element="tns:createProducto" />
+  </message>
+  <message name="createProductoResponse">
+    <part name="parameters" element="tns:createProductoResponse" />
+  </message>
+  <message name="editProducto">
+    <part name="parameters" element="tns:editProducto" />
+  </message>
+  <message name="editProductoResponse">
+    <part name="parameters" element="tns:editProductoResponse" />
+  </message>
+  <message name="removeProducto">
+    <part name="parameters" element="tns:removeProducto" />
+  </message>
+  <message name="removeProductoResponse">
+    <part name="parameters" element="tns:removeProductoResponse" />
+  </message>
+  <message name="findAllProducto">
+    <part name="parameters" element="tns:findAllProducto" />
+  </message>
+  <message name="findAllProductoResponse">
+    <part name="parameters" element="tns:findAllProductoResponse" />
+  </message>
+  <message name="countProducto">
+    <part name="parameters" element="tns:countProducto" />
+  </message>
+  <message name="countProductoResponse">
+    <part name="parameters" element="tns:countProductoResponse" />
+  </message>
+  <message name="CreateProducto2">
+    <part name="parameters" element="tns:CreateProducto2" />
+  </message>
+  <message name="CreateProducto2Response">
+    <part name="parameters" element="tns:CreateProducto2Response" />
+  </message>
+  <portType name="WSProducto">
+    <operation name="findRangeProducto">
+      <input wsam:Action="http://service/WSProducto/findRangeProductoRequest" message="tns:findRangeProducto" />
+      <output wsam:Action="http://service/WSProducto/findRangeProductoResponse" message="tns:findRangeProductoResponse" />
+    </operation>
+    <operation name="findProducto">
+      <input wsam:Action="http://service/WSProducto/findProductoRequest" message="tns:findProducto" />
+      <output wsam:Action="http://service/WSProducto/findProductoResponse" message="tns:findProductoResponse" />
+    </operation>
+    <operation name="createProducto">
+      <input wsam:Action="http://service/WSProducto/createProductoRequest" message="tns:createProducto" />
+      <output wsam:Action="http://service/WSProducto/createProductoResponse" message="tns:createProductoResponse" />
+    </operation>
+    <operation name="editProducto">
+      <input wsam:Action="http://service/WSProducto/editProductoRequest" message="tns:editProducto" />
+      <output wsam:Action="http://service/WSProducto/editProductoResponse" message="tns:editProductoResponse" />
+    </operation>
+    <operation name="removeProducto">
+      <input wsam:Action="http://service/WSProducto/removeProductoRequest" message="tns:removeProducto" />
+      <output wsam:Action="http://service/WSProducto/removeProductoResponse" message="tns:removeProductoResponse" />
+    </operation>
+    <operation name="findAllProducto">
+      <input wsam:Action="http://service/WSProducto/findAllProductoRequest" message="tns:findAllProducto" />
+      <output wsam:Action="http://service/WSProducto/findAllProductoResponse" message="tns:findAllProductoResponse" />
+    </operation>
+    <operation name="countProducto">
+      <input wsam:Action="http://service/WSProducto/countProductoRequest" message="tns:countProducto" />
+      <output wsam:Action="http://service/WSProducto/countProductoResponse" message="tns:countProductoResponse" />
+    </operation>
+    <operation name="CreateProducto2">
+      <input wsam:Action="http://service/WSProducto/CreateProducto2Request" message="tns:CreateProducto2" />
+      <output wsam:Action="http://service/WSProducto/CreateProducto2Response" message="tns:CreateProducto2Response" />
+    </operation>
+  </portType>
+  <binding name="WSProductoPortBinding" type="tns:WSProducto">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="findRangeProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="createProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removeProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findAllProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="countProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateProducto2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WSProducto">
+    <port name="WSProductoPort" binding="tns:WSProductoPortBinding">
+      <soap:address location="http://localhost:8080/WSAlimentos/WSProducto" />
+    </port>
+  </service>
+</definitions>

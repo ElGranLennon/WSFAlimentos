@@ -1,0 +1,8 @@
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\Biblioteca\bin\Debug\netstandard2.0\Biblioteca.deps.json
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\Biblioteca\bin\Debug\netstandard2.0\Biblioteca.dll
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\Biblioteca\bin\Debug\netstandard2.0\Biblioteca.pdb
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\Biblioteca\obj\Debug\netstandard2.0\Biblioteca.csproj.CoreCompileInputs.cache
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\Biblioteca\obj\Debug\netstandard2.0\Biblioteca.AssemblyInfoInputs.cache
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\Biblioteca\obj\Debug\netstandard2.0\Biblioteca.AssemblyInfo.cs
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\Biblioteca\obj\Debug\netstandard2.0\Biblioteca.dll
+C:\Users\Lennon\Documents\Visual Studio 2017\Projects\WSFAlimentos\Biblioteca\obj\Debug\netstandard2.0\Biblioteca.pdb

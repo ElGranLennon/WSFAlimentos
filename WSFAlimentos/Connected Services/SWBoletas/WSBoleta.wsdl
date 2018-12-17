@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://service/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WSBoleta" targetNamespace="http://service/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/WSAlimentos/WSBoleta?xsd=1" namespace="http://service/" />
+    </xsd:schema>
+  </types>
+  <message name="createBoleta">
+    <part name="parameters" element="tns:createBoleta" />
+  </message>
+  <message name="createBoletaResponse">
+    <part name="parameters" element="tns:createBoletaResponse" />
+  </message>
+  <message name="editBoleta">
+    <part name="parameters" element="tns:editBoleta" />
+  </message>
+  <message name="editBoletaResponse">
+    <part name="parameters" element="tns:editBoletaResponse" />
+  </message>
+  <message name="removeBoleta">
+    <part name="parameters" element="tns:removeBoleta" />
+  </message>
+  <message name="removeBoletaResponse">
+    <part name="parameters" element="tns:removeBoletaResponse" />
+  </message>
+  <message name="findBoleta">
+    <part name="parameters" element="tns:findBoleta" />
+  </message>
+  <message name="findBoletaResponse">
+    <part name="parameters" element="tns:findBoletaResponse" />
+  </message>
+  <message name="findAllBoleta">
+    <part name="parameters" element="tns:findAllBoleta" />
+  </message>
+  <message name="findAllBoletaResponse">
+    <part name="parameters" element="tns:findAllBoletaResponse" />
+  </message>
+  <message name="findRangeBoleta">
+    <part name="parameters" element="tns:findRangeBoleta" />
+  </message>
+  <message name="findRangeBoletaResponse">
+    <part name="parameters" element="tns:findRangeBoletaResponse" />
+  </message>
+  <message name="countBoleta">
+    <part name="parameters" element="tns:countBoleta" />
+  </message>
+  <message name="countBoletaResponse">
+    <part name="parameters" element="tns:countBoletaResponse" />
+  </message>
+  <message name="CreateBoleta2">
+    <part name="parameters" element="tns:CreateBoleta2" />
+  </message>
+  <message name="CreateBoleta2Response">
+    <part name="parameters" element="tns:CreateBoleta2Response" />
+  </message>
+  <portType name="WSBoleta">
+    <operation name="createBoleta">
+      <input wsam:Action="http://service/WSBoleta/createBoletaRequest" message="tns:createBoleta" />
+      <output wsam:Action="http://service/WSBoleta/createBoletaResponse" message="tns:createBoletaResponse" />
+    </operation>
+    <operation name="editBoleta">
+      <input wsam:Action="http://service/WSBoleta/editBoletaRequest" message="tns:editBoleta" />
+      <output wsam:Action="http://service/WSBoleta/editBoletaResponse" message="tns:editBoletaResponse" />
+    </operation>
+    <operation name="removeBoleta">
+      <input wsam:Action="http://service/WSBoleta/removeBoletaRequest" message="tns:removeBoleta" />
+      <output wsam:Action="http://service/WSBoleta/removeBoletaResponse" message="tns:removeBoletaResponse" />
+    </operation>
+    <operation name="findBoleta">
+      <input wsam:Action="http://service/WSBoleta/findBoletaRequest" message="tns:findBoleta" />
+      <output wsam:Action="http://service/WSBoleta/findBoletaResponse" message="tns:findBoletaResponse" />
+    </operation>
+    <operation name="findAllBoleta">
+      <input wsam:Action="http://service/WSBoleta/findAllBoletaRequest" message="tns:findAllBoleta" />
+      <output wsam:Action="http://service/WSBoleta/findAllBoletaResponse" message="tns:findAllBoletaResponse" />
+    </operation>
+    <operation name="findRangeBoleta">
+      <input wsam:Action="http://service/WSBoleta/findRangeBoletaRequest" message="tns:findRangeBoleta" />
+      <output wsam:Action="http://service/WSBoleta/findRangeBoletaResponse" message="tns:findRangeBoletaResponse" />
+    </operation>
+    <operation name="countBoleta">
+      <input wsam:Action="http://service/WSBoleta/countBoletaRequest" message="tns:countBoleta" />
+      <output wsam:Action="http://service/WSBoleta/countBoletaResponse" message="tns:countBoletaResponse" />
+    </operation>
+    <operation name="CreateBoleta2">
+      <input wsam:Action="http://service/WSBoleta/CreateBoleta2Request" message="tns:CreateBoleta2" />
+      <output wsam:Action="http://service/WSBoleta/CreateBoleta2Response" message="tns:CreateBoleta2Response" />
+    </operation>
+  </portType>
+  <binding name="WSBoletaPortBinding" type="tns:WSBoleta">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="createBoleta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editBoleta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="removeBoleta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findBoleta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findAllBoleta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findRangeBoleta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="countBoleta">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="CreateBoleta2">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WSBoleta">
+    <port name="WSBoletaPort" binding="tns:WSBoletaPortBinding">
+      <soap:address location="http://localhost:8080/WSAlimentos/WSBoleta" />
+    </port>
+  </service>
+</definitions>

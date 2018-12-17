@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://service/" targetNamespace="http://service/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="countSubTipo" type="tns:countSubTipo" />
+  <xs:element name="countSubTipoResponse" type="tns:countSubTipoResponse" />
+  <xs:element name="createSubTipo" type="tns:createSubTipo" />
+  <xs:element name="createSubTipoResponse" type="tns:createSubTipoResponse" />
+  <xs:element name="edioSubTipo" type="tns:edioSubTipo" />
+  <xs:element name="edioSubTipoResponse" type="tns:edioSubTipoResponse" />
+  <xs:element name="findAllSubTipo" type="tns:findAllSubTipo" />
+  <xs:element name="findAllSubTipoResponse" type="tns:findAllSubTipoResponse" />
+  <xs:element name="findRangeSubTipo" type="tns:findRangeSubTipo" />
+  <xs:element name="findRangeSubTipoResponse" type="tns:findRangeSubTipoResponse" />
+  <xs:element name="findSubtipoProducto" type="tns:findSubtipoProducto" />
+  <xs:element name="findSubtipoProductoResponse" type="tns:findSubtipoProductoResponse" />
+  <xs:element name="removoSubTipo" type="tns:removoSubTipo" />
+  <xs:element name="removoSubTipoResponse" type="tns:removoSubTipoResponse" />
+  <xs:element name="subtipoProducto" type="tns:subtipoProducto" />
+  <xs:element name="tipoProducto" type="tns:tipoProducto" />
+  <xs:complexType name="removoSubTipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:subtipoProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subtipoProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionStp" type="xs:string" />
+      <xs:element minOccurs="0" name="subtipoProductoPK" type="tns:subtipoProductoPK" />
+      <xs:element minOccurs="0" name="tipoProducto" type="tns:tipoProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subtipoProductoPK">
+    <xs:sequence>
+      <xs:element name="subtipoP" type="xs:short" />
+      <xs:element name="tipoProductoIdTp" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipoProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionTp" type="xs:string" />
+      <xs:element minOccurs="0" name="idTp" type="xs:short" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removoSubTipoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="edioSubTipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:subtipoProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="edioSubTipoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createSubTipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="entity" type="tns:subtipoProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="createSubTipoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findAllSubTipo">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="findAllSubTipoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:subtipoProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRangeSubTipo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="range" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findRangeSubTipoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:subtipoProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findSubtipoProducto">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findSubtipoProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:subtipoProducto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="countSubTipo">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="countSubTipoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
