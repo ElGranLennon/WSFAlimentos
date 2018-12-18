@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace WSFAlimentos
 {
-    public partial class Venta : Form
+    public partial class Venta : Form 
     {
         SWProducto.WSProductoClient producto = new SWProducto.WSProductoClient();
         SWVenta.WSVentasClient venta = new SWVenta.WSVentasClient();
